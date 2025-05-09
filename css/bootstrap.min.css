@@ -3518,18 +3518,18 @@ fieldset:disabled a.btn {
 
 .btn-link {
   font-weight: 400;
-  color: #007bff;
+  color: #1D3E94;
   text-decoration: none
 }
 
 .btn-link:hover {
   color: #0056b3;
-  text-decoration: underline
+  /* text-decoration: underline */
 }
 
 .btn-link.focus,
 .btn-link:focus {
-  text-decoration: underline
+  /* text-decoration: underline */
 }
 
 .btn-link.disabled,

@@ -903,7 +903,7 @@ body{
 /* footer */
 footer{
   width: 100%;
-  height: 60vh;
+  overflow: hidden;
   background-color: #0B1A35;
   font-size: 1rem;
   color: #fff;
@@ -939,6 +939,14 @@ footer .card-body ul{
   gap: 8px;
   color: #0B1A35;
   padding-left: 20px;
+}
+footer .f_c2 .accordion .card .card-header:hover {
+  background-color: #EDF2FF;
+  transition: 0.2s;
+}
+footer .f_c2 .accordion .card .card-header button:focus {
+  outline: none;
+  box-shadow: none;
 }
 .f_logo img{
   max-width: 160px;
@@ -1094,6 +1102,19 @@ footer .card-body ul{
     font-size: 1.25rem;
     font-weight: 600;
     margin-bottom: 4px;
+  }
+  .main .swiper_text{
+    top: 20px;
+    left: 0px;
+  }
+  .main .swiper_text2{
+    top: 20px;
+    left: 0px;
+  }
+  .main .swiper_text3{
+    bottom: 40px;
+    right: 0px;
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
   }
   .bf_t p{
     font-size: 16px;
