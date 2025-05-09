@@ -1,0 +1,883 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Air Busan</title>
+  <link rel="stylesheet" href="./css/bootstrap.min.css">
+  <link rel="stylesheet" href="./css/reset.css">
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="./css/swiper-bundle.min.css">
+
+  <script src="./script/jquery-3.7.1.min.js"></script>
+  <script src="./script/bootstrap.min.js"></script>
+  <script src="./script/swiper-bundle.min.js"></script>
+  <script src="./script/custom.js"></script>
+  <script src="https://kit.fontawesome.com/a6551a6480.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <!--header_t-->
+  <header class="header_t d-none d-lg-block">
+    <div class="container-lg">
+      <nav class="menu_t">
+        <ul>
+          <li><a href="#">로그인</a></li>
+          <li><a href="#">회원가입</a></li>
+          <li><a href="#">고객지원</a></li>
+        </ul>
+        <button type="button" class="lang">
+          <i class="fa-solid fa-globe"></i>
+          한국어
+          <i class="fa-solid fa-caret-down"></i>
+        </button>
+      </nav>
+    </div>
+  </header>
+  <!--//header_t-->
+
+  <!--header_b-->
+  <header class="header_b">
+    <div class="container-lg header_b_i">
+      <h1>
+        <a
+          href="file:///Volumes/SAMSUNG/%E1%84%8B%E1%85%A6%E1%84%8B%E1%85%A5%E1%84%87%E1%85%AE%E1%84%89%E1%85%A1%E1%86%AB/index.html">
+          <img src="./img/logo/logo.png" alt="airbusan_logo">
+        </a>
+        <span class="hidden d-none">에어부산</span>
+      </h1>
+
+      <ul class="nav me-auto mb-lg-0 d-none d-lg-flex">
+        <li class="nav_item dropdown">
+          <a class="nav_link dropdown-toggle px-3" href="#" id="bookingDropdown" role="button">
+            예매
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="bookingDropdown">
+            <li><a class="dropdown-item" href="#">항공권 예매</a></li>
+            <li><a class="dropdown-item" href="#">마일리지 예매</a></li>
+            <li><a class="dropdown-item" href="#">이벤트</a></li>
+            <li><a class="dropdown-item" href="#">운임안내</a></li>
+          </ul>
+        </li>
+
+        <li class="nav_item dropdown">
+          <a class="nav_link dropdown-toggle px-3" href="#" id="bookingDropdown" role="button" data-bs-toggle="dropdown"
+            aria-expanded="false">
+            조회
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="bookingDropdown">
+            <li><a class="dropdown-item" href="#">예약 조회</a></li>
+            <li><a class="dropdown-item" href="#">온라인 체크인</a></li>
+            <li><a class="dropdown-item" href="#">출/도착 조회</a></li>
+            <li><a class="dropdown-item" href="#">탑승 수속 안내</a></li>
+          </ul>
+        </li>
+
+        <li class="nav_item dropdown">
+          <a class="nav_link dropdown-toggle px-3" href="#" id="bookingDropdown" role="button" data-bs-toggle="dropdown"
+            aria-expanded="false">
+            서비스안내
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="bookingDropdown">
+            <li><a class="dropdown-item" href="#">혜택</a></li>
+            <li><a class="dropdown-item" href="#">수하물</a></li>
+            <li><a class="dropdown-item" href="#">도움이 필요한 손님</a></li>
+          </ul>
+        </li>
+
+        <li class="nav_item dropdown">
+          <a class="nav_link dropdown-toggle px-3" href="#" id="bookingDropdown" role="button" data-bs-toggle="dropdown"
+            aria-expanded="false">
+            회사소개
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="bookingDropdown">
+            <li><a class="dropdown-item" href="#">기업철학</a></li>
+            <li><a class="dropdown-item" href="#">인사말씀</a></li>
+            <li><a class="dropdown-item" href="#">연혁</a></li>
+            <li><a class="dropdown-item" href="#">채용안내</a></li>
+          </ul>
+        </li>
+
+        <li class="nav-item px-3" role="button">고객지원</li>
+      </ul>
+
+      <div class="search_pc d-none d-lg-block">
+        <input type="text" placeholder="검색">
+        <a href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
+      </div>
+
+      <div class="ham d-lg-none">
+        <a href="#">
+          <div class="ham_i">
+            <span class="line"></span>
+            <span class="line"></span>
+            <span class="line"></span>
+          </div>
+        </a>
+      </div>
+    </div>
+  </header>
+  <!--//header_b-->
+
+  <!-- hidemenu -->
+  <div class="menu">
+    <div class="menu_t">
+      <ul>
+        <li>
+          <button type="button" class="lang">
+            <i class="fa-solid fa-globe"></i>
+            한국어
+            <i class="fa-solid fa-caret-down"></i>
+          </button>
+        </li>
+        <li>
+          <i class="fa-solid fa-xmark xmark"></i>
+        </li>
+      </ul>
+    </div>
+    <div class="menu_b">
+      <ul class="menub_i">
+        <li>
+          <ul>
+            <li>예매</li>
+            <li><a href="#"><i class="fa-solid fa-plus"></i></a></li>
+          </ul>
+        </li>
+        <li>
+          <ul>
+            <li>조회/체크인</li>
+            <li><a href="#"><i class="fa-solid fa-plus"></i></a></li>
+          </ul>
+        </li>
+        <li>
+          <ul>
+            <li>서비스</li>
+            <li><a href="#"><i class="fa-solid fa-plus"></i></a></li>
+          </ul>
+        </li>
+        <li>
+          <ul>
+            <li>제휴상품</li>
+            <li><a href="#"><i class="fa-solid fa-plus"></i></a></li>
+          </ul>
+        </li>
+        <li>
+          <ul>
+            <li>수하물</li>
+            <li><a href="#"><i class="fa-solid fa-plus"></i></a></li>
+          </ul>
+        </li>
+        <li>
+          <ul>
+            <li>운항정보</li>
+            <li><a href="#"><i class="fa-solid fa-plus"></i></a></li>
+          </ul>
+        </li>
+        <li>
+          <ul>
+            <li>고객지원</li>
+            <li><a href="#"><i class="fa-solid fa-plus"></i></a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+    <!-- hidemenu -->
+
+    <!-- Swiper -->
+    <section class="main">
+      <div class="swiper mainSwiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <img src="./img/main/main_1.jpg" alt="main1">
+            <div class="container-lg swiper_text">
+              <h3>NATRANG <br> in VIETNAM</h3>
+              <h2>89,900원 ~ 159,000원</h2>
+              <p>5월 한정 특가</p>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <img src="./img/main/main_2_s.jpg" alt="main2">
+            <div class="container-lg swiper_text2">
+              <h3>TOKYO <br> in JAPAN</h3>
+              <h2>89,900원 ~ 189,000원</h2>
+              <p>5월 한정 특가</p>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <img src="./img/main/main_3.jpg" alt="main3">
+            <div class="container-lg swiper_text3">
+              <h2>
+                지금 예약하면 <br>
+                오사카 왕복 최저가!
+              </h2>
+              <p>왕복 항공권 + 무료 위탁수하물까지</p>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <img src="./img/main/main_4.jpg" alt="main4">
+            <div class="container-lg swiper_text4">
+              <h2>
+                2025 6월 <br>
+                마카오 신규 취항
+              </h2>
+              <p>편도 총액 84,900원부터!</p>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <img src="./img/main/main_5.jpg" alt="main5">
+            <div class="container-lg swiper_text4">
+              <h1>
+                4월~10월 출발 항공편 스케줄 오픈
+              </h1>
+              <h4>* 노선별 순차 오픈</h4>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-pagination"></div>
+      </div>
+
+      <!--ticket-->
+      <div class="container-lg ticket">
+        <div class="container-lg d-none d-lg-block">
+          <form class="booking-box p-3">
+            <div class="radio-group">
+              <label class="radio-label">
+                <input type="radio" name="trip" value="roundtrip" checked>
+                <span>왕복</span>
+              </label>
+              <label class="radio-label">
+                <input type="radio" name="trip" value="oneway">
+                <span>편도</span>
+              </label>
+            </div>
+
+            <div class="separator"></div>
+
+            <div class="row justify-content-between align-items-center mt-3">
+              <div class="col from_box">
+                <div class="dropdown info-group">
+                  <button class="btn dropdown-toggle icn" type="button" id="fromDropdown" data-bs-toggle="dropdown"
+                    aria-expanded="false">
+                    <span class="fromText">ICN 인천</span>
+                  </button>
+                  <ul class="dropdown-menu" aria-labelledby="formDropdown">
+                    <li><strong>동북아시아</strong>
+                      <ul>
+                        <li><a href="#" class="dropdown-item">서울</a></li>
+                        <li><a href="#" class="dropdown-item">부산</a></li>
+                        <li><a href="#" class="dropdown-item">제주</a></li>
+                      </ul>
+                    </li>
+                    <li><strong>동남아시아</strong>
+                      <ul>
+                        <li><a href="#" class="dropdown-item">다낭</a></li>
+                        <li><a href="#" class="dropdown-item">방콕</a></li>
+                      </ul>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-auto text-center">
+                <button type="button" class="change_btn"><i class="fa-solid fa-arrow-right-arrow-left"></i></button>
+              </div>
+              <div class="col from_box">
+                <div class="dropdown info-group">
+                  <button class="btn dropdown-toggle" type="button" id="fromDropdown" data-bs-toggle="dropdown"
+                    aria-expanded="false">
+                    <span class="toText">어디로 갈까요?</span>
+                  </button>
+                  <ul class="dropdown-menu" aria-labelledby="formDropdown">
+                    <li><strong>동북아시아</strong>
+                      <ul>
+                        <li><a href="#" class="dropdown-item">도쿄</a></li>
+                        <li><a href="#" class="dropdown-item">후쿠오카</a></li>
+                        <li><a href="#" class="dropdown-item">홍콩</a></li>
+                      </ul>
+                    </li>
+                    <li><strong>동남아시아</strong>
+                      <ul>
+                        <li><a href="#" class="dropdown-item">다낭</a></li>
+                        <li><a href="#" class="dropdown-item">나트랑</a></li>
+                        <li><a href="#" class="dropdown-item">방콕</a></li>
+                      </ul>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="col">
+                <div class="dropdown info-group">
+                  <button class="btn dropdown-toggle" type="button" id="passengersDropdown" data-bs-toggle="dropdown"
+                    aria-expanded="false">
+                    <span class="grayText">날짜를 선택하세요.</span>
+                  </button>
+                </div>
+              </div>
+
+              <div class="col">
+                <div class="dropdown info-group">
+                  <button class="btn dropdown-toggle" type="button" id="passengersDropdown" data-bs-toggle="dropdown"
+                    aria-expanded="false">
+                    <span class="grayText">성인 1</span>
+                  </button>
+                  <ul class="dropdown-menu" aria-labelledby="passengersDropdown">
+                    <li><a href="#" class="dropdown-item">성인 2</a></li>
+                    <li><a href="#" class="dropdown-item">성인 3</a></li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="col">
+                <div class="dropdown info-group">
+                  <button class="btn dropdown-toggle" type="button" id="seatsDropdown" data-bs-toggle="dropdown"
+                    aria-expanded="false">
+                    <span class="grayText">모든 좌석</span>
+                  </button>
+                  <ul class="dropdown-menu" aria-labelledby="seatsDropdown">
+                    <li class="mb-2"><a href="#"><strong>좌석 선택</strong></a></li>
+                    <li><a href="#" class="dropdown-item">이코노미</a></li>
+                    <li><a href="#" class="dropdown-item">프리미엄</a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col d-flex justify-content-end align-items-center">
+                <button type="submit" class="btn btn_search px-4">
+                  <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+              </div>
+            </div>
+          </form>
+        </div>
+
+        <div class="container-lg d-lg-none">
+          <div class="booking-box">
+            <div class="booking-i p-3">
+              <a href="#">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <p>항공권 검색</p>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--//ticket-->
+    </section>
+
+    <!--event-->
+    <section class="event">
+      <div class="container-lg event_title">
+        <h2>진행중인 이벤트</h2>
+      </div>
+      <div class="swiper eventSwiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <img src="./img/event/event_1.jpg" alt="promotion_bg">
+            <div class="container-lg swiper_text1">
+              <h2>
+                7월 탑승 <br>
+                국내선 얼리버드 프로모션
+              </h2>
+              <p>2025-04-17 ~ 2025-04-23</p>
+              <button type="text">with 호텔앤리조트 제주</button>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <img src="./img/event/event_3-1.jpg" alt="shilla_bg">
+            <div class="shilla">
+              <div class="container-lg swiper_text2">
+                <h2>
+                  에어부산 & 신라면세점
+                </h2>
+                <img src="./img/event/shilla duty free.png" alt="shilla">
+                <p class="d-lg-block d-none">에어부산과 신라면세점이 함께하는 특별한 혜택
+                  특가 항공권 구매하고, <br> 신라면세점 쇼핑 지원 혜택까지 받아보세요.</p>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <img src="./img/event/spring_event.jpg" alt="spring_bg">
+            <div class="black"></div>
+            <div class="container-lg swiper_text3">
+              <h3>
+                봄맞이 해외여행 찬스, <br>
+                해외 항공권 에어부산 특가 OPEN
+              </h3>
+              <p>2025-04-17 ~ 2025-04-23</p>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <img src="./img/event/event_4.jpg" alt="viewmore_bg">
+            <div class="black"></div>
+            <div class="viewmore">
+              <a href="#">
+                <h2>이벤트 전체보기</h2>
+                <i class="fa-solid fa-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-pagination"></div>
+      </div>
+    </section>
+    <!--//event-->
+
+
+    <!--benefit-->
+    <section class="benefit">
+
+      <div class="container-lg benefit_title">
+        <h2>여행 상품</h2>
+      </div>
+
+      <div class="b_mbox col d-lg-none d-block">
+        <div class="b_mboxMain">
+          <figure class="benefit_bg"><img src="./img/product/benefit_bg_t.jpg" alt="benefit_bg"></figure>
+          <figure class="wing"><img src="./img/logo/logowing_w.png" alt="logowing_w"></figure>
+          <div class="b_mboxi_t">
+            <h2>
+              에어부산 고객을 위한 <br>
+              다양한 여행 상품
+            </h2>
+            <a href="#"></a>
+            <button type="button" class="bt_btm">
+              <p>더 많은 혜택 누리기</p>
+              <i class="fa-solid fa-arrow-right"></i>
+            </button>
+            </a>
+          </div>
+        </div>
+        <div class="b_mboxi">
+          <img src="./img/product/hotel_t.jpg" alt="hotel">
+          <figure class="b_corner"><img src="./img/product/b_corner.png" alt="b_corner"></figure>
+          <div class="bf_t">
+            <h2>
+              호텔
+            </h2>
+            <a href="#"><i class="fa-solid fa-circle-arrow-right"></i></a>
+            <p>편안한 휴식, 완벽한 여행의 시작. <br>
+              에어부산 제휴 호텔에서 특별 요금으로 머무르세요.</p>
+          </div>
+        </div>
+        <div class="b_mboxi">
+          <img src="./img/product/rentcar_t.jpg" alt="rentcar">
+          <figure class="b_corner"><img src="./img/product/b_corner.png" alt="b_corner"></figure>
+          <div class="bf_t">
+            <h2>
+              렌터카
+            </h2>
+            <a href="#"><i class="fa-solid fa-circle-arrow-right"></i></a>
+            <p>믿을 수 있는 렌터가 서비스와 함께, <br>
+              원하는 곳 어디든 편하게 이동하세요.</p>
+          </div>
+        </div>
+        <div class="b_mboxi">
+          <img src="./img/product/dutyfreeinflight_t.jpg" alt="dutyfreeinflight">
+          <figure class="b_corner"><img src="./img/product/b_corner.png" alt="b_corner"></figure>
+          <div class="bf_t">
+            <h2>
+              기내면세
+            </h2>
+            <a href="#"><i class="fa-solid fa-circle-arrow-right"></i></a>
+            <p>에어부산 기내면세점에서 인기 브랜드를 <br>
+              합리적인 가격에 만나보세요.</p>
+          </div>
+        </div>
+        <div class="b_mboxi">
+          <img src="./img/product/wifi_t.jpg" alt="wifi">
+          <figure class="b_corner"><img src="./img/product/b_corner.png" alt="b_corner"></figure>
+          <div class="bf_t">
+            <h2>
+              와이파이
+            </h2>
+            <a href="#"><i class="fa-solid fa-circle-arrow-right"></i></a>
+            <p>해외에서도 끊김 없는 연결! <br>
+              사전예약으로 더 저렴하게 이용할 수 있습니다.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="benefit_wrap">
+
+        <div class="b_box">
+          <figure class="benefit_bg"><img src="./img/product/benefit_bg.jpg" alt="benefit_bg"></figure>
+          <figure class="wing"><img src="./img/logo/logowing_w.png" alt="logowing_w"></figure>
+          <div class="b_tbox">
+            <h2>
+              에어부산 고객을 위한 <br>
+              다양한 여행 상품
+            </h2>
+            <a href="#"></a>
+            <button type="button" class="bt_btm">
+              <p>더 많은 혜택 누리기</p>
+              <i class="fa-solid fa-arrow-right"></i>
+            </button>
+            </a>
+          </div>
+        </div>
+
+        <div class="swiper bfSwiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <img src="./img/product/hotel.jpg" alt="hotel">
+              <figure class="b_corner"><img src="./img/product/b_corner.png" alt="b_corner"></figure>
+              <div class="bf_t">
+                <h2>
+                  호텔
+                </h2>
+                <a href="#"><i class="fa-solid fa-circle-arrow-right"></i></a>
+                <p>편안한 휴식, 완벽한 여행의 시작. <br>
+                  에어부산 제휴 호텔에서 특별 요금으로 머무르세요.</p>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <img src="./img/product/rentcar.jpg" alt="rentcar">
+              <figure class="b_corner"><img src="./img/product/b_corner.png" alt="b_corner"></figure>
+              <div class="bf_t">
+                <h2>
+                  렌터카
+                </h2>
+                <a href="#"><i class="fa-solid fa-circle-arrow-right"></i></a>
+                <p>믿을 수 있는 렌터가 서비스와 함께, <br>
+                  원하는 곳 어디든 편하게 이동하세요.</p>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <img src="./img/product/dutyfreeinflight.jpg" alt="dutyfreeinflight">
+              <figure class="b_corner"><img src="./img/product/b_corner.png" alt="b_corner"></figure>
+              <div class="bf_t">
+                <h2>
+                  기내면세
+                </h2>
+                <a href="#"><i class="fa-solid fa-circle-arrow-right"></i></a>
+                <p>에어부산 기내면세점에서 인기 브랜드를 <br>
+                  합리적인 가격에 만나보세요.</p>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <img src="./img/product/wifi.jpg" alt="wifi">
+              <figure class="b_corner"><img src="./img/product/b_corner.png" alt="b_corner"></figure>
+              <div class="bf_t">
+                <h2>
+                  와이파이
+                </h2>
+                <a href="#"><i class="fa-solid fa-circle-arrow-right"></i></a>
+                <p>해외에서도 끊김 없는 연결! <br>
+                  사전예약으로 더 저렴하게 이용할 수 있습니다.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </section>
+    <!--//benefit-->
+
+    <!-- <div class="container-lg">
+<div>
+  <figure>
+    <picture>
+      <source srcset="./img/main/main_1.jpg" media="(min-width:1200px)">
+      <source srcset="./img/main/main_t1.jpg" media="(min-width:767px)">
+      <source srcset="./img/main/main_m1.jpg" media="(min-width:1px)">
+      <img src="./" alt="item1">
+    </picture>
+  </figure>
+</div>
+</div> -->
+
+
+    <!--ad-->
+    <section class="ad">
+      <div class="ad_box">
+        <figure><img src="./img/cdCreaditBJCBLP.png" alt="card"></figure>
+        <h2>신한카드 PLATINUM+</h2>
+        <p>항공권 할인, 해외 이용금액 캐시백등 속 깊은 혜택을 더한</p>
+        <button type="button">자세히 보기</button>
+      </div>
+    </section>
+    <!--//ad-->
+
+    <!--info-->
+    <section class="info">
+      <div class="container-lg">
+        <div class="row justify-content-between">
+          <div class="col-lg-7">
+            <div class="info_box">
+              <div class="info_t">
+                <div class="i_title">
+                  <h2><a href="#">공지사항</a></h2>
+                  <span>
+                    <h2><a href="#">변경운항</a></h2>
+                  </span>
+                </div>
+                <a href="#"><i class="fa-solid fa-angle-right"></i></a>
+              </div>
+            </div>
+
+            <div class="info_content">
+              <div class="i_c">
+                <p><a href="#">[국내선] 제주 운임 안내</a></p>
+              </div>
+              <div class="i_d">
+                <span>
+                  <p>2025-04-22</p>
+                </span>
+              </div>
+            </div>
+            <div class="info_content">
+              <div class="i_c">
+                <p><a href="#">부산-울란바토르 노선 위탁수하물 변경 안내</a></p>
+              </div>
+              <div class="i_d">
+                <span>
+                  <p>2025-04-22</p>
+                </span>
+              </div>
+            </div>
+            <div class="info_content">
+              <div class="i_c">
+                <p><a href="#">해외사이트를 통한 항공권 구매 유의사항</a></p>
+              </div>
+              <div class="i_d">
+                <span>
+                  <p>2025-04-22</p>
+                </span>
+              </div>
+            </div>
+            <div class="info_content">
+              <div class="i_c">
+                <p><a href="#">기상 악화 관련 비정상 운항 예상 안내</a></p>
+              </div>
+              <div class="i_d">
+                <span>
+                  <p>2025-04-22</p>
+                </span>
+              </div>
+            </div>
+            <div class="info_content">
+              <div class="i_c">
+                <p><a href="#">에어부산 사칭 웹사이트 주의 안내</a></p>
+              </div>
+              <div class="i_d">
+                <span>
+                  <p>2025-04-22</p>
+                </span>
+              </div>
+            </div>
+            <div class="info_content">
+              <div class="i_c">
+                <p><a href="#">승객 직접 소지 물품 안내</a></p>
+              </div>
+              <div class="i_d">
+                <span>
+                  <p>2025-04-22</p>
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4">
+            <div class="contact_title">
+              <h2>Contact us</h2>
+            </div>
+            <div class="contact_box_wrap d-flex flex-column flex-md-row flex-lg-column">
+              <div class="contact_box col-12 col-md-6 col-lg-12">
+                <div class="contact_t">
+                  <h3>예약 센터</h3>
+                  <p>09:00~18:00 <span>(연중무휴)</span></p>
+                </div>
+                <div class="call_i">
+                  <button type="button"><i class="fa-solid fa-phone-flip"></i></button>
+                </div>
+              </div>
+              <div class="contact_box col-12 col-md-6 col-lg-12">
+                <div class="contact_t">
+                  <h3>단체 문의</h3>
+                  <p>09:00~17:00 <span>(주말, 공휴일 제외)</span></p>
+                </div>
+                <div class="call_i">
+                  <button type="button"><i class="fa-solid fa-phone-flip"></i></button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--//info-->
+
+    <!--footer-->
+    <footer>
+      <div class="container-lg">
+        <div class="row justify-content-between">
+          <div class="col-lg-10 col-12 footer_box">
+            <div class="f_c d-none d-md-block">
+            <ul>
+              <li><span class="li_t">에어부산</span>
+                <ul>
+                  <li><a href="#">회사소개</a></li>
+                  <li><a href="#">ESG 경영</a></li>
+                  <li><a href="#">채용안내</a></li>
+                  <li><a href="#">보도자료</a></li>
+                </ul>
+              </li>
+              <li><span class="li_t">약관 및 규정</span>
+                <ul>
+                  <li><a href="#">개인정보처리방침</a></li>
+                  <li><a href="#">이용약관</a></li>
+                  <li><a href="#">이메일무단수집거부</a></li>
+                </ul>
+              </li>
+              <li><span class="li_t">기타안내</span>
+                <ul>
+                  <li><a href="#">보도자료</a></li>
+                  <li><a href="#">투자안내</a></li>
+                </ul>
+              </li>
+              <li><span class="li_t">고객지원</span>
+                <ul>
+                  <li><a href="#">공지사항</a></li>
+                  <li><a href="#">인터넷도우미</a></li>
+                  <li><a href="#">문의센터</a></li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+
+          <div class="f_c2 d-block d-md-none">
+            <div class="accordion" id="accordionExample">
+              <div class="card">
+                <div class="card-header" id="headingOne">
+                  <h2 class="mb-0">
+                    <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                      에어부산
+                    </button>
+                  </h2>
+                </div>
+                <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+                  <div class="card-body">
+                    <ul>
+                      <li><a href="#">회사소개</a></li>
+                      <li><a href="#">ESG 경영</a></li>
+                      <li><a href="#">채용안내</a></li>
+                      <li><a href="#">보도자료</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="card">
+                <div class="card-header" id="headingTwo">
+                  <h2 class="mb-0">
+                    <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                      약관 및 규정
+                    </button>
+                  </h2>
+                </div>
+                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+                  <div class="card-body">
+                    <ul>
+                      <li><a href="#">개인정보처리방침</a></li>
+                      <li><a href="#">이용약관</a></li>
+                      <li><a href="#">이메일무단수집거부</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="card">
+                <div class="card-header" id="headingThree">
+                  <h2 class="mb-0">
+                    <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                      Collapsible Group Item #3
+                    </button>
+                  </h2>
+                </div>
+                <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+                  <div class="card-body">
+                    And lastly, the placeholder content for the third and final accordion panel. This panel is hidden by default.
+                  </div>
+                </div>
+              </div>
+              <div class="card">
+                <div class="card-header" id="headingThree">
+                  <h2 class="mb-0">
+                    <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                      Collapsible Group Item #3
+                    </button>
+                  </h2>
+                </div>
+                <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+                  <div class="card-body">
+                    And lastly, the placeholder content for the third and final accordion panel. This panel is hidden by default.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+            <div class="company_info">
+              <div class="f_logo">
+                <img src="./img/logo/logo_w.png" alt="logo_w">
+              </div>
+              <div class="company_text">
+                <p>대표이사 정병섭 부산광역시 강서구 유통단지1로 57번가길 6(대저2동) 우: 46721</p>
+                <p>Copyright 2009 BY AIR BUSAN CO., LTD. All Rights reserved</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-1 col-12">
+            <div class="sns_box">
+              <a href="#"><img src="./img/logo/insta.png" alt="insta"></a>
+              <a href="#"><img src="./img/logo/youtube.png" alt="youtube"></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!--//footer-->
+
+</body>
+<script>
+  var swiper = new Swiper(".mainSwiper", {
+    pagination: {
+      el: ".swiper-pagination",
+      type: "progressbar",
+    },
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+  });
+
+  var swiper = new Swiper(".eventSwiper", {
+    effect: "coverflow",
+    grabCursor: true,
+    centeredSlides: true,
+    slidesPerView: "auto",
+    coverflowEffect: {
+      rotate: 50,
+      stretch: 0,
+      depth: 100,
+      modifier: 1,
+      slideShadows: true,
+    },
+    pagination: {
+      el: ".swiper-pagination",
+    },
+  });
+
+  var swiper = new Swiper(".bfSwiper", {
+    slidesPerView: "auto",
+    spaceBetween: 24,
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+  });
+</script>
+
+</html>
