@@ -153,6 +153,7 @@ body{
 .menu .menu_t{
   width: 100%;
   height: 10%;
+  min-height: 100px;
   background-color: #1D3E94;
   padding: 20px 16px;
   margin-bottom: 16px;
@@ -672,7 +673,7 @@ body{
 .b_mbox .b_mboxMain{
   width: 100%;
   height: 30vh;
-  min-height: 150px;
+  min-height: 300px;
   border-radius: 28px;
   position: relative;
   margin-bottom: 20px;
@@ -732,7 +733,7 @@ body{
 .b_mbox .b_mboxi{
   width: 100%;
   height: 20vh;
-  min-height: 120px;
+  min-height: 250px;
   border-radius: 28px;
   position: relative;
   margin-bottom: 20px;
