@@ -967,8 +967,9 @@ footer .f_c2 .accordion .card .card-header button:focus {
 .sns_box{
   margin-top: 50px;
   display: flex;
-  
+  justify-content: flex-end;
   align-items: center;
+  padding-right: 12px;
   gap: 20px;
 }
 .sns_box img:first-child{
