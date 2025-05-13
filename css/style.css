@@ -247,8 +247,8 @@ body{
   height: 136px;
   border-bottom-right-radius: 8px;
   border-bottom-left-radius: 8px;
-  background-color: #ffffffcb;
-  color: #0B1A35;
+  background-color: #ffffffef;
+  color: #1D3E94;
   position: absolute;
   top: 0;
   left: 16%;
@@ -272,7 +272,7 @@ body{
 }
 .main .swiper_text h2{
   letter-spacing: 1px;
-  font-size: 52px;
+  font-size: 48px;
 }
 .main .swiper_text3{
   text-align: right;
@@ -1009,7 +1009,10 @@ footer .f_c2 .accordion .card .card-header button:focus {
 }
 @media screen and (max-width: 991px) {
   .main .swiper_cbox{
-    left: 25px;
+    width: 110px;
+    height: 120px;
+    left: 40px;
+    font-size: 14px;
   }
   .main .swiper_text{
     bottom: 10%;
@@ -1108,6 +1111,9 @@ footer .f_c2 .accordion .card .card-header button:focus {
 }
 
 @media screen and (max-width: 575px) {
+  .main .swiper_text h2{
+    font-size: 40px;
+  }
   .swiper_text4 h1{
     font-size: 28px;
   }
