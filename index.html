@@ -191,18 +191,22 @@
         <div class="swiper-wrapper">
           <div class="swiper-slide">
             <img src="./img/main/main_1.jpg" alt="main1">
+            <div class="swiper_cbox">
+              <p>NATRANG <br>in VIETNAM</p>
+            </div>
             <div class="container-lg swiper_text">
-              <h3>NATRANG <br> in VIETNAM</h3>
-              <h2>89,900원 ~ 159,000원</h2>
-              <p>5월 한정 특가</p>
+              <h2>89,900원 <br> ~ 159,000원</h2>
+              <p>*5월 한정 특가</p>
             </div>
           </div>
           <div class="swiper-slide">
             <img src="./img/main/main_2_s.jpg" alt="main2">
-            <div class="container-lg swiper_text2">
-              <h3>TOKYO <br> in JAPAN</h3>
-              <h2>89,900원 ~ 189,000원</h2>
-              <p>5월 한정 특가</p>
+            <div class="container-lg swiper_cbox">
+              <p>TOKYO <br>in JAPAN</p>
+            </div>
+            <div class="container-lg swiper_text">
+              <h2>89,900원 <br> ~ 189,000원</h2>
+              <p>*5월 한정 특가</p>
             </div>
           </div>
           <div class="swiper-slide">
@@ -853,10 +857,10 @@
 <script>
   var swiper = new Swiper(".mainSwiper", {
     loop: true,
-    autoplay: {
-    delay: 3000,
-    disableOnInteraction: false,
-    },
+     autoplay: {
+     delay: 3000,
+     disableOnInteraction: false,
+     },
     speed: 1500,
     pagination: {
       el: ".swiper-pagination",

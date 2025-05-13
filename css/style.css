@@ -1,6 +1,17 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
-
+@font-face {
+  font-family: 'Paperlogy-5Medium';
+  src: url('Paperlogy-5Medium.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Paperlogy-7Bold';
+  src: url('Paperlogy-7Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+}
 body{
   font-family: "Noto Sans KR", sans-serif;
   background-color: #fff;
@@ -230,25 +241,38 @@ body{
   height: 100%;
   object-fit: cover;
 }
-.main .swiper_text{
-  text-align: left;
-  color: #fff;
-  width: 80%;
-  max-width: 400px;
+.main .swiper_cbox{
+  font-family: 'Paperlogy-5Medium';
+  width: 120px;
+  height: 136px;
+  border-bottom-right-radius: 8px;
+  border-bottom-left-radius: 8px;
+  background-color: #ffffffcb;
+  color: #0B1A35;
   position: absolute;
-  top: 15%;
-  left: 12%;
-  text-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+  top: 0;
+  left: 16%;
+  justify-content: center;
+  text-align: center;
+  display: flex;
+  align-items: flex-end;
+  font-size: 16px;
+  font-weight: 500;
+  padding: 12px 8px;
 }
-.main .swiper_text2{
-  text-align: left;
+.main .swiper_text{
+  text-align: right;
   color: #fff;
   width: 80%;
   max-width: 400px;
   position: absolute;
-  top: 15%;
-  left: 12%;
-  text-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+  bottom: 20%;
+  right: 15%;
+  text-shadow: 0 0 5px rgba(0, 0, 0, 0.593);
+}
+.main .swiper_text h2{
+  letter-spacing: 1px;
+  font-size: 52px;
 }
 .main .swiper_text3{
   text-align: right;
@@ -257,7 +281,7 @@ body{
   max-width: 400px;
   position: absolute;
   bottom: 20%;
-  right: 12%;
+  right: 15%;
   text-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
 }
 .main .swiper_text4{
@@ -984,6 +1008,18 @@ footer .f_c2 .accordion .card .card-header button:focus {
 
 }
 @media screen and (max-width: 991px) {
+  .main .swiper_cbox{
+    left: 25px;
+  }
+  .main .swiper_text{
+    bottom: 10%;
+    right: 20px;
+  }
+  .main .swiper_text3{
+    bottom: 10%;
+    right: 20px;
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+  }
   .event .swiper-slide{
     width: 80%;
     height: 40vh;
@@ -1116,19 +1152,6 @@ footer .f_c2 .accordion .card .card-header button:focus {
     font-weight: 600;
     margin-bottom: 4px;
   }
-  .main .swiper_text{
-    top: 20px;
-    left: 0px;
-  }
-  .main .swiper_text2{
-    top: 20px;
-    left: 0px;
-  }
-  .main .swiper_text3{
-    bottom: 40px;
-    right: 0px;
-    text-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
-  }
   .bf_t p{
     font-size: 16px;
   }
@@ -1158,10 +1181,6 @@ footer .f_c2 .accordion .card .card-header button:focus {
   }
   .info{
     margin-bottom: 200px;
-  }
-  .main .swiper_text{
-    top: 16px;
-    left: 0px;
   }
   .main .swiper_text2{
     top: 16px;
