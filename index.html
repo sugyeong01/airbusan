@@ -853,6 +853,11 @@
 <script>
   var swiper = new Swiper(".mainSwiper", {
     loop: true,
+    autoplay: {
+    delay: 3000,
+    disableOnInteraction: false,
+    },
+    speed: 1500,
     pagination: {
       el: ".swiper-pagination",
       type: "progressbar",
